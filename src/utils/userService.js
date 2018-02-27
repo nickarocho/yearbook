@@ -3,7 +3,7 @@ import tokenService from './tokenService';
 
 function signup(user) {
   return userAPI.signup(user)
-    .then(token => tokenService.setToken(token));
+  .then(token => tokenService.setToken(token));
 }
 
 function getUser() {
@@ -16,7 +16,7 @@ function logOut() {
 
 function login(creds) {
   return userAPI.login(creds)
-    .then(token => tokenService.setToken(token))
+  .then(token => tokenService.setToken(token))
 }
 
 export default {

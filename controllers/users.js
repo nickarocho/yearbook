@@ -14,7 +14,9 @@ function signup(req, res) {
       res.json({token: createJWT(user)});
     })
     // User data invalid
-    .catch(err => res.status(400).json(err));
+    .catch(err => {
+      return res.status(400).json(err)
+    });
 }
 
 function login(req, res) {
