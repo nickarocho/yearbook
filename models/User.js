@@ -2,14 +2,53 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 const SALT_ROUNDS = 6;
 
-var userSchema = new mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: {type: String, required: true, lowercase: true, unique: true},
-  password: String
-}, {
-  timestamps: true
+var Milestones = new mongoose.Schema({
+  title: String,
+  year: Number,
+  description: String
 });
+
+var Memories = new mongoose.Schema({
+  title: String,
+  description: String
+});
+
+var userSchema = new mongoose.Schema({
+
+  firstName: {type: String, required: true},
+  lastName: {type: String, required: true},
+  email: {type: String, lowercase: true, unique: true},
+  password: String,
+  isAdmin: Boolean,
+
+  curStatement: String,
+  curHeadshot: String,
+  curLocation: String,
+  curJobs: Array,
+  curMaritalStatus: String,
+  curKids: Boolean,
+  curNumKids: Number,
+
+  elapStatement: String,
+  elapPhotos: Array,
+  elapLocations: Array,
+  elapJobs: Array,
+  elapEducation: Array,
+  elapTravel: Array,
+  elapMilestones: [Milestones],
+
+  initStatement: String,
+  initHeadshot: String,
+  initPhotos: Array,
+  initTeams: Array,
+  memories: [Memories]
+
+}, {
+  timestamps: true,
+  virtuals: true
+});
+
+// ---------- JWT Config ---------- //
 
 userSchema.set('toJSON', {
   transform: function(doc, ret) {
@@ -35,5 +74,9 @@ userSchema.pre('save', function(next) {
 userSchema.methods.comparePassword = function(tryPassword, cb) {
   bcrypt.compare(tryPassword, this.password, cb);
 };
+
+// userSchema.virtual('fullName').get(function() {
+//   return this.firstName + ' ' + this.lastName;
+// });
 
 module.exports = mongoose.model('User', userSchema);
