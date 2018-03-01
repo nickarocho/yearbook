@@ -15,8 +15,8 @@ var Memories = new mongoose.Schema({
 
 var userSchema = new mongoose.Schema({
 
-  firstName: {type: String, required: true},
-  lastName: {type: String, required: true},
+  firstName: {type: String, lowercase: true, required: true},
+  lastName: {type: String, lowercase: true, required: true},
   email: {type: String, lowercase: true, unique: true},
   password: String,
   isAdmin: Boolean,
