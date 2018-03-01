@@ -1,23 +1,32 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {Navbar, NavItem} from 'react-materialize'
 import './NavBar.css';
 
 const NavBar = (props) => {
   let nav = props.user ?
     <div>
-      <Link to='' className='NavBar-link' onClick={props.handleLogout}>Log Out</Link>
-      <span className='NavBar-welcome'>Welcome, {props.user.firstName}</span>
+      <NavItem>
+        <Link to='' className='NavBar-link' onClick={props.handleLogout}>Log Out</Link>
+      </NavItem>
+      <NavItem>
+        <span className='NavBar-welcome'>Welcome, {props.user.firstName}</span>
+      </NavItem>
     </div>
     :
     <div>
-      <Link to='/login' className='NavBar-link'>Log In</Link>
-      <Link to='/signup' className='NavBar-link'>Sign Up</Link>
+      <NavItem>
+        <Link to='/login' className='NavBar-link'>Log In</Link>
+      </NavItem>
+      <NavItem>
+        <Link to='/signup' className='NavBar-link'>Sign Up</Link>
+      </NavItem>
     </div>;
 
   return (
-    <div className='NavBar'>
+    <Navbar brand='Yearbook' className="black" right>
       {nav}
-    </div>
+    </Navbar>
   );
 };
 

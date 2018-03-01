@@ -1,0 +1,9 @@
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-center {
+  height: 100vh;
+}
