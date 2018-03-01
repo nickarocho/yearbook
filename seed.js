@@ -27,7 +27,7 @@ User.remove({})
       "elapTravel": ["Japan", "Switzerland", "England", "France", "Italy", "Netherlands", "Belgium", "South Korea", "Mexico", "Lithuania", "Taiwan", "Fiji", "Spain"],
       "elapMilestones": [{"title": "DCI World Championship", "year": 2010, "description": "Blue Devils Drum and Bugle Corps"}, {"title": "Got Married", "year": 2017, "description": "I am a lucky man."}],
       "initStatement": "I think it's so weird when people say they hated high school, because it was a blast for me.",
-      "initHeadshot": "https://i.imgur.com/taZ0IA0.png",
+      "initHeadshot": "https://i.imgur.com/088K03D.png",
       "initPhotos": ["https://i.imgur.com/50rRlbU.png", "https://i.imgur.com/50rRlbU.png", "https://i.imgur.com/50rRlbU.png", "https://i.imgur.com/50rRlbU.png", "https://i.imgur.com/50rRlbU.png"],
       "initTeams": ["Drumline", "Jazz Band", "Concert Band", "Marching Band", "Baseball", "Football", "Track"],
       "memories": [{"title": "Halftime IS Gametime", "description": "Playing on the track during the varsity football games were always such a blast."}]
