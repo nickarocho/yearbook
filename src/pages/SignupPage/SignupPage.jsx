@@ -14,7 +14,7 @@ class SignupPage extends Component {
 
   render() {
     return (
-      <div className='SignupPage'>
+      <div className="SignupPage vertical-center flex-center-center">
         <SignupForm
           {...this.props}
           updateMessage={this.updateMessage}

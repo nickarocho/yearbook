@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import YearbookIndex from '../../components/YearbookIndex/YearbookIndex';
-import NavBar from '../../components/NavBar/NavBar'
+import ProfilePage from '../ProfilePage/ProfilePage';
+import { Link, Route, Switch } from 'react-router-dom';
+
 
 class YearbookIndexPage extends Component {
   constructor(props) {
@@ -25,10 +27,6 @@ class YearbookIndexPage extends Component {
   render(props) {
     return (
       <div>
-        <NavBar 
-          user={this.props.user}
-          handleLogout={this.props.handleLogout}
-        />
         <YearbookIndex 
           yearbookIndex={this.state.yearbookIndex}
           updateSearch={this.updateSearch}

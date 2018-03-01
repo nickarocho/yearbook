@@ -22,7 +22,7 @@ class LoginForm extends Component {
     userService.login(this.state)
     .then(() => {
       this.props.handleLogin();
-      this.props.history.push('/index');
+      this.props.history.push('/yearbook');
     })
     .catch(err => alert('Wrong email or password. Try again.'));
   }
