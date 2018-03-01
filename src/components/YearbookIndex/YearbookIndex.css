@@ -1,8 +1,33 @@
-.Index-grid {
+@media only screen and (min-width: 200px) {
+  .Index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 10px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Index-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .Index-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Index-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 0 30px;
   text-align: center;
+}
 }
 
 img.Index-headshot {
@@ -14,4 +39,29 @@ p.Index-name {
   font-size: 20px;
   line-height: 0;
   padding-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+input.search {
+  width: 250px;
+  background-color: rgb(227, 227, 227);
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+input.search::placeholder {
+  color: rgb(159, 159, 159);
+}
+
+/* when text input is in focus */
+input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid rgb(114, 114, 114);
+  box-shadow: 0 1px 0 0 rgb(114, 114, 114);
 }
