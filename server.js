@@ -18,6 +18,7 @@ app.use(require('./config/auth'));
 
 // API routes
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/yearbook', require('./routes/api/yearbook'));
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));

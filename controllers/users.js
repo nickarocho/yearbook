@@ -4,7 +4,8 @@ var SECRET = process.env.SECRET;
 
 module.exports = {
   signup,
-  login
+  login,
+  index
 };
 
 function signup(req, res) {
@@ -31,6 +32,12 @@ function login(req, res) {
       }
     });
   }).catch(err => res.status(401).json(err));
+}
+
+function index(req, res) {
+  User.find({})
+    .then((user) => res.json(user).status(200))
+    .catch(err => console.log(err));
 }
 
 function createJWT(user) {

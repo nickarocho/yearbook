@@ -36,6 +36,11 @@ class App extends Component {
   componentDidMount() {
     let user = userService.getUser();
     this.setState({user});
+
+    fetch('/api/yearbook/index')
+      .then(res => res.json())
+      .then(users => this.setState({users}))
+      .catch(err => console.log(err))
   }
 
   render() {
@@ -60,6 +65,7 @@ class App extends Component {
             }/>
             <Route exact path='/login' render={(props) => 
               <LoginPage
+                // className="vertical-center flex-center-center"
                 {...props}
                 handleLogin={this.handleLogin}
               />
