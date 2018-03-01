@@ -1,30 +1,36 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './YearbookIndex.css';
 
 const YearbookIndex = (props) => {
   
   let filteredIndex = props.yearbookIndex.filter(
     (user) => {
-      console.log(user.lastName)
-      return user.lastName.indexOf(props.search) !== -1;
+      // console.log(user.fullName)
+      return `${user.firstName} ${user.lastName}`.toLowerCase().includes(props.search.toLowerCase());
     }
   )
   
   return (
     <div className="container">
       <div className="sub-header">
+        <div>
           <input className="search" placeholder="Type to search..." type="text"
             value={props.search}
-            onChange={props.updateSearch} />
+            onChange={props.updateSearch} 
+          />
         </div>
-        <div className="Index-grid">
-          {filteredIndex.map((user, idx) =>
-            <div>
-              <img className="Index-headshot" src={user.initHeadshot} /> 
+      </div>
+      <div className="Index-grid">
+        {filteredIndex.map((user, idx) =>
+          <div>
+            <Link to={user._id + "/current"}>
+              <img className="Index-headshot" src={user.initHeadshot} alt=""/>
               <p className="Index-name">{user.firstName} {user.lastName}</p>
-            </div>
-          )}
-        </div>
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

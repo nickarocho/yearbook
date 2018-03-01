@@ -7,9 +7,11 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import userService from '../../utils/userService';
+import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage'
 import SignupPage from '../SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage';
+import ProfilePage from '../ProfilePage/ProfilePage';
 import YearbookIndexPage from '../YearbookIndexPage/YearbookIndexPage';
 
 class App extends Component {
@@ -35,7 +37,7 @@ class App extends Component {
 
   componentDidMount() {
     let user = userService.getUser();
-    this.setState({user});
+  this.setState({user});
 
     fetch('/api/yearbook/index')
       .then(res => res.json())
@@ -47,6 +49,11 @@ class App extends Component {
     return (
       <div>
         <Router>
+          <div>
+          <NavBar 
+            user={this.state.user}
+            handleLogout={this.handleLogout}
+          />
           <Switch>
             <Route exact path='/' render={() => 
               <HomePage
@@ -70,7 +77,7 @@ class App extends Component {
                 handleLogin={this.handleLogin}
               />
             }/>
-            <Route exact path='/index' render={() => (
+            <Route exact path='/yearbook' render={() => (
               userService.getUser() ?
                 <YearbookIndexPage 
                   user={this.state.user}
@@ -79,7 +86,18 @@ class App extends Component {
               :
                 <Redirect to='/login' />
             )}/>
+            <Route path='/yearbook/:id' render={(props) => (
+              userService.getUser() ?
+                <ProfilePage 
+                  {...props}
+                  user={this.state.user}
+                  handleLogout={this.handleLogout}
+                />
+              :
+                <Redirect to='/login' />
+            )}/>
           </Switch>
+          </div>
         </Router>
       </div>
     );
