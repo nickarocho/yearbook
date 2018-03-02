@@ -1,16 +1,71 @@
 import React from 'react';
+import { Row, Col, CardPanel } from 'react-materialize';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 const CurLife = (props) => {
 
   return (
-    <div>
-      <h2>CURRENT LIFE component</h2>
-      <hr />
-      <div>
-        {props.user.firstName}
-        {props.user.lastName}
-      </div>
-    </div>
+      <Row className="Profile-body">
+          <Col s={1} m={2} className="body-item">
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+            </ul>
+          </Col>
+          <Col s={11} m={10}>
+            <CardPanel>
+              <h4>Section Here</h4>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
+                duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
+                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p> 
+            </CardPanel>
+            <CardPanel>
+              <h4>Section Here</h4>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
+                duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
+                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p> 
+            </CardPanel>
+            <CardPanel>
+              <h4>Section Here</h4>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
+                duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
+                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p> 
+            </CardPanel>
+            <CardPanel>
+              <h4>Section Here</h4>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
+                duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
+                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p> 
+            </CardPanel>
+          </Col>
+        </Row>
   )
 
 }

@@ -24,7 +24,7 @@ const YearbookIndex = (props) => {
       <div className="Index-grid">
         {filteredIndex.map((user, idx) =>
           <div>
-            <Link to={user._id + "/current"}>
+            <Link to={"/yearbook/" + user._id + "/current"}>
               <img className="Index-headshot" src={user.initHeadshot} alt=""/>
               <p className="Index-name">{user.firstName} {user.lastName}</p>
             </Link>
