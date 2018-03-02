@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import YearbookIndex from '../../components/YearbookIndex/YearbookIndex';
-import ProfilePage from '../ProfilePage/ProfilePage';
-import { Link, Route, Switch } from 'react-router-dom';
-
 
 class YearbookIndexPage extends Component {
   constructor(props) {

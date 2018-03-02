@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link
@@ -9,8 +8,6 @@ import './ProfilePage.css';
 import CurLife from './../../components/Profile/CurLife';
 import ElapLife from './../../components/Profile/ElapLife';
 import InitLife from './../../components/Profile/InitLife';
-import { Row, Col } from 'react-materialize';
-import { StickyContainer, Sticky } from 'sticky';
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -53,8 +50,8 @@ class ProfilePage extends Component {
                   <div className="tab"><Link to={`/yearbook/${this.props.match.params.id}/initial`}>2008</Link></div>
                 </div>
                 <div className="Profile-headshots">
-                  <div><img className="headshot" src={this.state.user.curHeadshot} alt={`${this.state.user.firstName}'s current photo`} /></div>
-                  <div><img className="headshot" src={this.state.user.initHeadshot} alt={`${this.state.user.firstName}'s current photo`} /></div>
+                  <div><img className="headshot" src={this.state.user.curHeadshot} alt={`${this.state.user.firstName}'s current headshot`} /></div>
+                  <div><img className="headshot" src={this.state.user.initHeadshot} alt={`${this.state.user.firstName}'s high school headshot`} /></div>
                 </div>
               </div>
             </div>
