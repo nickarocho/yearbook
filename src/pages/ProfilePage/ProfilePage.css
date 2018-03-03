@@ -86,3 +86,113 @@ h2 {
 .body-item {
   background-color: white;
 }
+
+.quote-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.quote-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.Update-btn {
+  align-self: 
+}
+
+/* ------ Current Life ------ */
+
+.highlight {
+  display: flex;
+  align-items: center;
+}
+
+h4 {
+  margin: 0;
+}
+
+p.highlight, ul {
+  padding-left: 10px;
+}
+
+i.highlight {
+  margin: 10px;
+}
+
+/* ------ Elapsed Life ------ */
+
+
+/* ------ Mobile Styling ------ */
+
+@media only screen and (max-width: 1000px) {
+  .Profile-body {
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 8px;
+  }
+  
+  .Profile-wrapper {
+    width: 100vw;
+  }
+
+  .Profile-container {
+    margin: 0 5px;
+  }
+  
+  .Profile-view {
+    margin: 0 10px;
+  }
+  
+  .Profile-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .Profile-header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .Profile-header-bottom {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  
+  .Profile-tabs {
+    width: 100%;
+    margin: 15px;
+    padding: 0 20px;
+    position: inherit;
+  }
+
+  .Sidebar {
+    display: none;
+  }
+  
+  .back-btn {
+    padding: 20px;
+  }
+  
+  .Profile-headshots {
+    justify-content: space-around;
+    width: inherit;
+    padding-bottom: 0;
+    margin: 15px;
+  }
+  
+  .headshot {
+    height: 130px;
+  }
+}

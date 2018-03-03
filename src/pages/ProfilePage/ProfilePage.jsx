@@ -17,6 +17,11 @@ class ProfilePage extends Component {
     }
   }
 
+  updateField = (fieldToChange, newValue) => {
+    // this.setState()
+    console.log(fieldToChange, newValue)
+  }
+
   componentDidMount() {
     console.log(this.props.match.params.id)
     fetch(`/api/yearbook/${this.props.match.params.id}`)
@@ -58,7 +63,10 @@ class ProfilePage extends Component {
               
               <Switch>
                 <Route path={`/yearbook/${this.props.match.params.id}/current`} render={() =>
-                  <CurLife user={this.state.user}/>
+                  <CurLife 
+                    user={this.state.user}
+                    updateField={this.updateField}
+                  />
                 }/>
                 <Route path={`/yearbook/${this.props.match.params.id}/elapsed`} render={() =>
                   <ElapLife user={this.state.user}/>

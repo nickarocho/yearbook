@@ -17,7 +17,7 @@ import YearbookIndexPage from '../YearbookIndexPage/YearbookIndexPage';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {user: null}
   }
 
   handleLogout = () => {
@@ -37,7 +37,7 @@ class App extends Component {
 
   componentDidMount() {
     let user = userService.getUser();
-  this.setState({user});
+    this.setState({user});
 
     fetch('/api/yearbook/index')
       .then(res => res.json())
