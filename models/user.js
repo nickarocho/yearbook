@@ -13,6 +13,28 @@ var Memories = new mongoose.Schema({
   description: String
 });
 
+var PlacesLived = new mongoose.Schema({
+  location: String,
+  locationStartDate: Number,
+  locationEndDate: Number,
+  description: String
+});
+
+var Education = new mongoose.Schema({
+  school: String,
+  schoolStartDate: Number,
+  schoolEndDate: Number,
+  description: String
+});
+
+var PastJobs = new mongoose.Schema({
+  jobTitle: String,
+  company: String,
+  jobStartDate: Number,
+  jobEndDate: Number,
+  description: String
+});
+
 var userSchema = new mongoose.Schema({
 
   firstName: {type: String, lowercase: true, required: true},
@@ -31,9 +53,9 @@ var userSchema = new mongoose.Schema({
 
   elapStatement: String,
   elapPhotos: Array,
-  elapLocations: Array,
-  elapJobs: Array,
-  elapEducation: Array,
+  elapLocations: [PlacesLived],
+  elapJobs: [PastJobs],
+  elapEducation: [Education],
   elapTravel: Array,
   elapMilestones: [Milestones],
 
