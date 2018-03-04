@@ -1,5 +1,5 @@
 .Profile-container {
-  margin: 0 80px;
+  /* margin: 0 ; */
 }
 
 .Profile-wrapper {
@@ -65,10 +65,19 @@ h2 {
   padding-bottom: 90px;
 }
 
-.headshot {
+.curHeadshot {
   height: 150px;
   border-radius: 100px;
   box-shadow: 5px 6px 20px #8888885f;
+}
+
+.initHeadshot {
+  height: 150px;
+  object-fit: cover;
+  object-position: 0 15%;
+  width:150px;
+  height:150px;
+  border-radius: 100px;
 }
 
 .Profile-body {

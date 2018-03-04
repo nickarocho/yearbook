@@ -10,4 +10,5 @@ nav .nav-wrapper {
 
 .NavBar-welcome {
   color: grey;
+  text-transform: capitalize;
 }
