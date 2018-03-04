@@ -27,6 +27,12 @@ var Education = new mongoose.Schema({
   description: String
 });
 
+var CurJobs = new mongoose.Schema({
+  jobTitle: String,
+  company: String,
+  description: String
+});
+
 var PastJobs = new mongoose.Schema({
   jobTitle: String,
   company: String,
@@ -46,7 +52,7 @@ var userSchema = new mongoose.Schema({
   curStatement: String,
   curHeadshot: String,
   curLocation: String,
-  curJobs: Array,
+  curJobs: [CurJobs],
   curMaritalStatus: String,
   curKids: Boolean,
   curNumKids: Number,
