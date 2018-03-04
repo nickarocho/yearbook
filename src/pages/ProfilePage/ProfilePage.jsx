@@ -55,8 +55,8 @@ class ProfilePage extends Component {
                   <div className="tab"><Link to={`/yearbook/${this.props.match.params.id}/initial`}>2008</Link></div>
                 </div>
                 <div className="Profile-headshots">
-                  <div><img className="headshot" src={this.state.user.curHeadshot} alt={`${this.state.user.firstName}'s current headshot`} /></div>
-                  <div><img className="headshot" src={this.state.user.initHeadshot} alt={`${this.state.user.firstName}'s high school headshot`} /></div>
+                  <div><img className="curHeadshot" src={this.state.user.curHeadshot} alt={`${this.state.user.firstName}'s current headshot`} /></div>
+                  <div><img className="initHeadshot" src={this.state.user.initHeadshot} alt={`${this.state.user.firstName}'s high school headshot`} /></div>
                 </div>
               </div>
             </div>
