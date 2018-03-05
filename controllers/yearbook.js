@@ -9,13 +9,26 @@ function index(req, res) {
 }
 
 function showUser(req, res) {
-  console.log(req.params.id)
   User.findById(req.params.id)
+    .then((user) => res.json(user).status(200))
+    .catch(err => console.log(err));
+}
+
+function updateData(req, res) {
+  console.log(req.body)
+  User.findByIdAndUpdate(req.params.id, req.body)
+    .then(function(user) {
+      user.curStatement = req.body.curStatement;
+      user.curJobs = req.body.curJobs;
+      user.save();
+      return user
+    })
     .then((user) => res.json(user).status(200))
     .catch(err => console.log(err));
 }
 
 module.exports = {
   index,
-  showUser
+  showUser,
+  updateData
 };

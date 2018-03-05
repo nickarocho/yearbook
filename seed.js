@@ -4243,7 +4243,7 @@ User.remove({})
       "elapTravel": [],
       "elapMilestones": [],
       "initStatement": "",
-      "initHeadshot": "https://i.imgur.com/FCCTLaJ.png",
+      "initHeadshot": "https://i.imgur.com/PJS0iI0.png",
       "initPhotos": [],
       "initTeams": [],
       "memories": []

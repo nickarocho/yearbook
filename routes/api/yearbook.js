@@ -1,17 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var yearbookCtrl = require('../../controllers/yearbook');
+var bodyParser = require('body-parser');
 
-/*---------- Public Routes ----------*/
+router.use(bodyParser.json());
+
 router.get('/index', yearbookCtrl.index);
 router.get('/:id', yearbookCtrl.showUser);
-
-
-
-/*---------- Protected Routes ----------*/
-
-
-
-
+router.put('/:id/update', yearbookCtrl.updateData)
 
 module.exports = router;

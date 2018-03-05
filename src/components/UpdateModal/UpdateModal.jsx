@@ -4,10 +4,12 @@ import { Modal, Button } from 'react-materialize';
 
 const UpdateModal = (props) => {
 
-  var editField = [];
-  for (var field in props) {
-    editField.push(<label>{field.toString().split("_").join(" ")}
-    <input onChange={ (e) => props.updateField(field, e.target.value) } className="Modal" type="text" value={props[field]} /></label>)
+  let editField = [];
+
+  for (let key in props) {
+    if (key !== "handleUpdate" && key !== "updateField") {
+      editField.push(<label>{key.toString().split("_").join(" ")}<input onChange={(e) => props.updateField(`${key}`, e.target.value)} className="Modal" type="text" value={props[key]} /></label>)
+    }
   }
 
   return (
@@ -15,9 +17,9 @@ const UpdateModal = (props) => {
       className='Modal'
       header='Update Section'
       fixedFooter
-      trigger={<Button floating small className='red' waves='light' icon='edit' />}>
+      trigger={<Button floating small="true" className='red' waves='light' icon='edit' />}>
       { editField }
-      <Button onClick={props.handleUpdate} >Update</Button>
+      <Button onClick={props.handleUpdate}>Update</Button>
     </Modal>
   )
 
