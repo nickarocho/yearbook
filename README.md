@@ -9,6 +9,8 @@ I always thought it would be so cool to have an app where all of the students in
 Eventually this is going to be where people can buy tickets for the actual event, get info about when/where/how and all other logistics to help with the planning process and hopefully reconnect with eachother!
  
 ![UI Screenshot](https://i.imgur.com/thzt97y.png)
+![UI Screenshot](https://i.imgur.com/1a7wFKj.png)
+![UI Screenshot](https://i.imgur.com/IllGr0M.png)
 
 ## Getting Started
 (https://immense-garden-11814.herokuapp.com/)
