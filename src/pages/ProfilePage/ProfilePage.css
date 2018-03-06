@@ -67,8 +67,21 @@ h2 {
 
 .curHeadshot {
   height: 150px;
+  object-fit: cover;
+  object-position: 0 15%;
+  width:150px;
+  height:150px;
   border-radius: 100px;
   box-shadow: 5px 6px 20px #8888885f;
+  z-index: 0;
+}
+
+.Update-img-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 35em;
 }
 
 .initHeadshot {
@@ -119,8 +132,6 @@ h2 {
   justify-content: flex-end;
 }
 
-/* ------ Current Life ------ */
-
 .highlight {
   display: flex;
   align-items: center;
@@ -137,9 +148,6 @@ p.highlight, ul {
 i.highlight {
   margin: 10px;
 }
-
-/* ------ Elapsed Life ------ */
-
 
 /* ------ Mobile Styling ------ */
 

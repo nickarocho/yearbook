@@ -40,8 +40,6 @@
   .Index-headshot {
     max-width: 100%;
     object-fit: cover;
-    /* width: 250px !important;
-    height: 250px !important; */
     object-position: 0 15%;
     border-radius: 5px;
   }
@@ -51,17 +49,7 @@
 
 img.activator {
   max-width: 100%;
-  /* object-fit: cover;
-  width:25vw;
-  height: 25vh;
-  object-position: 0 15%; */
   border-radius: 5px;
-}
-
-.card .card-title {
-  text-transform: capitalize;
-  font-size: 20px;
-  text-align: left;
 }
 
 .card .card-content {
@@ -69,7 +57,9 @@ img.activator {
 }
 
 .card .link {
-  text-align: right;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
 }
 
 .cardHighlight {

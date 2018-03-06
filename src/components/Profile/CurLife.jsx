@@ -2,7 +2,6 @@ import React from 'react';
 import UpdateModal from './../../components/UpdateModal/UpdateModal'
 import { Row, Col, CardPanel } from 'react-materialize';
 import { Icon } from 'react-materialize';
-import userService from '../../utils/userService';
 
 const CurLife = (props) => {
 

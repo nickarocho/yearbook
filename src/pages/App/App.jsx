@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Redirect
@@ -49,6 +48,10 @@ class App extends Component {
     })
   }
 
+  handleFocus = (e) => {
+    e.target.select();
+  }
+
   handleUpdate = () =>  {
     fetch(`/api/yearbook/${userService.getUser()._id}/update`, {
       method: 'PUT',
@@ -58,6 +61,11 @@ class App extends Component {
       .then(res => res.json())
       .then(user => {(user) => this.setState({user})})
       .catch(err => console.log(err));
+  }
+
+  handleImageUpdate = () => {
+    this.handleUpdate();
+    this.refreshPage();
   }
 
   /*---------- Lifecycle Methods ----------*/
@@ -124,7 +132,9 @@ class App extends Component {
                 <ProfilePage 
                   selectedUser={this.state.users && this.state.users.find(user => user._id === props.match.params.id)}
                   handleUpdate={this.handleUpdate}
+                  handleImageUpdate={this.handleImageUpdate}
                   updateField={this.updateField}
+                  handleFocus={this.handleFocus}
                   refreshPage={this.refreshPage}
                   viewingLoggedInUsersProfile={ userService.getUser()._id === props.match.params.id }
                   user={this.state.user}

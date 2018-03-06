@@ -1,10 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProfilePage.css';
 import { Row, Preloader } from 'react-materialize';
 import CurLife from './../../components/Profile/CurLife';
 import ElapLife from './../../components/Profile/ElapLife';
 import InitLife from './../../components/Profile/InitLife';
+import UpdateModal from './../../components/UpdateModal/UpdateModal'
+import UpdateImageModal from './../../components/UpdateModal/UpdateImageModal'
 
 const ProfilePage = (props) => {
 
@@ -28,8 +30,22 @@ const ProfilePage = (props) => {
               <div className="tab">2018</div>
             </div>
             <div className="Profile-headshots">
-              <div><img className="initHeadshot" src={props.selectedUser.initHeadshot} alt={`${props.selectedUser.firstName}'s high school headshot`} /></div>
-              <div><img className="curHeadshot" src={props.selectedUser.curHeadshot} alt={`${props.selectedUser.firstName}'s current headshot`} /></div>
+              <div>
+                <img className="initHeadshot" src={props.selectedUser.initHeadshot} alt={'High school headshot'} />
+              </div>
+              <div>
+                <img className="curHeadshot" src={props.selectedUser.curHeadshot} alt={'Current headshot'} />
+                {props.viewingLoggedInUsersProfile &&
+                  <div className="Update-img-btn">
+                    <UpdateImageModal
+                      curHeadshot={props.user.curHeadshot}
+                      updateField={props.updateField}
+                      handleImageUpdate={props.handleImageUpdate}
+                      refreshPage={props.refreshPage}
+                      handleFocus={props.handleFocus}
+                    />
+                </div>}
+              </div>
             </div>
           </div>
         </div>

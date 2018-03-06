@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Card, CardTitle, Icon, Preloader } from 'react-materialize';
+import { Card, CardTitle, Preloader } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import './YearbookIndexPage.css';
 
@@ -46,20 +46,20 @@ class YearbookIndexPage extends Component {
           <div className="Index-grid">
             {this.filteredIndex(this.props.users).map((user, idx) => (
               <div key={idx}>
-                <Card header={<CardTitle reveal className="Index-headshot" image={user.initHeadshot} waves='light'/>}
-                  title={user.firstName + " " + user.lastName}
-                  reveal={
-                    <div>
-                      <div className="cardHighlight">
-                        <Icon col={2} className="highlight">location_on</Icon>
-                        <p col={10}>{user.curLocation}</p>
-                      </div>
-                      <Link to={"/yearbook/" + user._id}><p className="link">View Profile</p></Link>
-                    </div>
-                  }>
-                </Card>
-              </div>)
-            )}
+              {/*----- Add link to Profile only if user has added info ----*/}
+                {user.curStatement ? 
+                  <Link to={"/yearbook/" + user._id}>
+                    <Card className="Index-headshot" header={<CardTitle image={user.initHeadshot} waves='light'/>}>
+                      <Link to={"/yearbook/" + user._id}><p className="link">{user.firstName + " " + user.lastName}</p></Link>
+                    </Card>
+                  </Link>
+                :
+                  <Card className="Index-headshot" header={<CardTitle image={user.initHeadshot}/>}>
+                    <p className="link">{user.firstName + " " + user.lastName}</p>
+                  </Card>
+                }
+              </div>
+            ))}
           </div>
         </div>
       : <div className="vertical-center flex-center-center"><Preloader size='big'/></div>
