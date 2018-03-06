@@ -1,0 +1,21 @@
+img.class-pic {
+  width: 70vw;
+  border-radius: 15px;
+}
+
+.Home-wrapper {
+  margin: 30px;
+}
+
+.Home-page {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.View-btn {
+  margin-top: 30px;
+}
