@@ -3,6 +3,27 @@
   margin: 20px;
 }
 
+.modal {
+  min-height: 40%;
+  max-height: 100%;
+}
+
+.Modal-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal .modal-footer .btn, 
+.modal .modal-footer .btn-large, 
+.modal .modal-footer .btn-flat {
+  margin: 40px 20px;
+}
+
+h4 {
+  line-height: 2em;
+}
+
 input[type=text] {
   background-color: rgb(230, 230, 230);
   border-bottom: 1px solid rgb(114, 114, 114);

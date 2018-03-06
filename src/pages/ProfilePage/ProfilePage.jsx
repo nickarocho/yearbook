@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import './ProfilePage.css';
-import { Row } from 'react-materialize';
+import { Row, Preloader } from 'react-materialize';
 import CurLife from './../../components/Profile/CurLife';
 import ElapLife from './../../components/Profile/ElapLife';
 import InitLife from './../../components/Profile/InitLife';
@@ -37,27 +37,32 @@ const ProfilePage = (props) => {
         <Row className="Profile-body">
 
           <CurLife 
+            viewingLoggedInUsersProfile={props.viewingLoggedInUsersProfile}
             user={props.viewingLoggedInUsersProfile ? props.user : props.selectedUser } 
             updateField={props.updateField}
             handleUpdate={props.handleUpdate}
-            
-            />
-          {/* // <ElapLife 
-          //   user={props.selectedUser}
-          //   updateField={props.updateField}
-          //   handleUpdate={props.handleUpdate}
-          //   />
-          // <InitLife
-          //   user={props.selectedUser}
-          //   updateField={props.updateField}
-          //   handleUpdate={props.handleUpdate}
-          // /> */}
+            refreshPage={props.refreshPage}
+          />
+          <ElapLife 
+            viewingLoggedInUsersProfile={props.viewingLoggedInUsersProfile}
+            user={props.viewingLoggedInUsersProfile ? props.user : props.selectedUser } 
+            updateField={props.updateField}
+            handleUpdate={props.handleUpdate}
+            refreshPage={props.refreshPage}
+          />
+          <InitLife
+            viewingLoggedInUsersProfile={props.viewingLoggedInUsersProfile}
+            user={props.viewingLoggedInUsersProfile ? props.user : props.selectedUser } 
+            updateField={props.updateField}
+            handleUpdate={props.handleUpdate}
+            refreshPage={props.refreshPage}
+          />
 
         </Row>
           
       </div>
     </div>
-  </div> : <h1>Loading</h1>;
+  </div> : <div className="vertical-center flex-center-center"><Preloader size='big'/></div>;
 
   return (
     <div>

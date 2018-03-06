@@ -115,7 +115,8 @@ h2 {
 }
 
 .Update-btn {
-  align-self: 
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* ------ Current Life ------ */

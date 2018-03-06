@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Card, CardTitle, Icon } from 'react-materialize';
+import { Card, CardTitle, Icon, Preloader } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import './YearbookIndexPage.css';
 
@@ -46,25 +46,23 @@ class YearbookIndexPage extends Component {
           <div className="Index-grid">
             {this.filteredIndex(this.props.users).map((user, idx) => (
               <div key={idx}>
-
                 <Card header={<CardTitle reveal className="Index-headshot" image={user.initHeadshot} waves='light'/>}
                   title={user.firstName + " " + user.lastName}
                   reveal={
                     <div>
-                    <div className="cardHighlight">
-                      <Icon col={2} className="highlight">location_on</Icon>
-                      <p col={10}>{user.curLocation}</p>
-                    </div>
+                      <div className="cardHighlight">
+                        <Icon col={2} className="highlight">location_on</Icon>
+                        <p col={10}>{user.curLocation}</p>
+                      </div>
                       <Link to={"/yearbook/" + user._id}><p className="link">View Profile</p></Link>
                     </div>
                   }>
                 </Card>
-
               </div>)
             )}
           </div>
         </div>
-      : <h1>Loading</h1> 
+      : <div className="vertical-center flex-center-center"><Preloader size='big'/></div>
 
     return (
       <div>{display}</div>

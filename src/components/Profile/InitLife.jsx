@@ -6,36 +6,60 @@ import { Icon } from 'react-materialize'
 const InitLife = (props) => {
 
   return (
-    <CardPanel>
-      <Row>
-        <Col s={3} className="panel-title"><h4>2008</h4></Col>
-        <Col s={9} className="highlights">
-          <div className="highlight">
-            <Icon className="highlight">location_on</Icon>
-            <ul>
-              {props.user.elapLocations ? props.user.elapLocations.map((location, idx) =>
-              <li key={idx}>Lived in <span className="strong">{location.location}</span> from {location.locationStartDate} to {location.locationEndDate}</li>
-              ) : null }
-            </ul>
+    <div>
+      <CardPanel>
+        <div className="quote-text">
+          <div className="quote-icon">
+            <Icon>remove</Icon>
+            <Icon>format_quote</Icon>
+            <Icon>remove</Icon>
           </div>
-          <div className="highlight">
-            <Icon className="highlight">business_center</Icon>
-            <ul>
-              {props.user.elapJobs ? props.user.elapJobs.map((job, idx) =>
-              <li key={idx}><span className="strong">{job.jobTitle}</span>: {job.company} ({job.jobStartDate} to {job.jobEndDate})</li>
-              ) : null }
-            </ul>
-          </div>
-        </Col>
-      </Row>
-      <div className="Update-btn">
-        <UpdateModal
-          curStatement={props.user.curStatement}
-          updateField={props.updateField}
-          handleUpdate={props.handleUpdate}
-        />
-      </div>
-    </CardPanel>
+          <p>{props.user.initStatement}</p>
+        </div>
+        {props.viewingLoggedInUsersProfile &&
+          <div className="Update-btn">
+            <UpdateModal
+              initStatement={props.user.curStatement}
+              updateField={props.updateField}
+              handleUpdate={props.handleUpdate}
+              refreshPage={props.refreshPage}
+            />
+          </div>}
+      </CardPanel>
+      <CardPanel>
+        <Row>
+          <Col s={3} className="panel-title"><h4>2008</h4></Col>
+          <Col s={9} className="highlights">
+            <div className="highlight">
+              <Icon className="highlight">location_on</Icon>
+              <ul>
+                {props.user.elapLocations ? props.user.elapLocations.map((location, idx) =>
+                <li key={idx}>Lived in <span className="strong">{location.location}</span> from {location.locationStartDate} to {location.locationEndDate}</li>
+                ) : null }
+              </ul>
+            </div>
+            <div className="highlight">
+              <Icon className="highlight">business_center</Icon>
+              <ul>
+                {props.user.elapJobs ? props.user.elapJobs.map((job, idx) =>
+                <li key={idx}><span className="strong">{job.jobTitle}</span>: {job.company} ({job.jobStartDate} to {job.jobEndDate})</li>
+                ) : null }
+              </ul>
+            </div>
+          </Col>
+        </Row>
+        <div className="Update-btn">
+          <UpdateModal
+            initStatement={props.user.initStatement}
+            initTeams={props.user.initTeams}
+            memories={props.user.memories}
+            updateField={props.updateField}
+            handleUpdate={props.handleUpdate}
+            refreshPage={props.refreshPage}
+          />
+        </div>
+      </CardPanel>
+    </div>
   )
 
 }

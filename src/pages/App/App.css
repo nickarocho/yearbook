@@ -7,3 +7,7 @@
 .vertical-center {
   height: 100vh;
 }
+
+#sidenav-overlay {
+  z-index: 0;
+}

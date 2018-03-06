@@ -24,6 +24,10 @@ class App extends Component {
     }
   }
 
+  refreshPage = () => {
+    window.location.reload();
+  }
+
   handleLogout = () => {
     userService.logOut();
     this.setState({user: null})
@@ -121,6 +125,7 @@ class App extends Component {
                   selectedUser={this.state.users && this.state.users.find(user => user._id === props.match.params.id)}
                   handleUpdate={this.handleUpdate}
                   updateField={this.updateField}
+                  refreshPage={this.refreshPage}
                   viewingLoggedInUsersProfile={ userService.getUser()._id === props.match.params.id }
                   user={this.state.user}
                 />
