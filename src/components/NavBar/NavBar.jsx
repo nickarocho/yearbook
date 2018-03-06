@@ -12,7 +12,7 @@ const NavBar = (props) => {
           <span className='NavBar-welcome'>Welcome, {props.user.firstName}</span>
         </li>
         <li>
-          <Link to={props.url === '/yearbook' ? props.user._id : 'yearbook/'+ props.user._id} className='NavBar-link'><Icon alt="View your profile">person</Icon></Link>
+          <Link to={`/yearbook/${props.user._id}`} className='NavBar-link'><Icon alt="View your profile">person</Icon></Link>
         </li>
         <li>
           <Link to='' className='NavBar-link' onClick={props.handleLogout}>Log Out</Link>
