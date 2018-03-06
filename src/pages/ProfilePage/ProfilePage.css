@@ -71,7 +71,7 @@
 .Update-img-btn {
   position: absolute;
   z-index: 1;
-  bottom: 69em;
+  bottom: 33em;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -106,7 +106,7 @@
 }
 
 .card-panel {
-  background-color: rgb(255, 235, 235);
+  background-color: #EBEBEB;
 }
 
 .body-item {
