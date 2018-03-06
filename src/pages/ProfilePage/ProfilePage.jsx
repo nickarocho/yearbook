@@ -5,7 +5,6 @@ import { Row, Preloader, Button } from 'react-materialize';
 import CurLife from './../../components/Profile/CurLife';
 import ElapLife from './../../components/Profile/ElapLife';
 import InitLife from './../../components/Profile/InitLife';
-import UpdateModal from './../../components/UpdateModal/UpdateModal'
 import UpdateImageModal from './../../components/UpdateModal/UpdateImageModal'
 
 const ProfilePage = (props) => {
