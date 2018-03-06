@@ -10,7 +10,9 @@ import UpdateImageModal from './../../components/UpdateModal/UpdateImageModal'
 
 const ProfilePage = (props) => {
 
-  let display = (props.selectedUser && props.user) ? <div className="Profile-container">
+  let display = (props.selectedUser && props.user) ? 
+  
+  <div className="Profile-container">
 
     <div className="back-btn">
       <Link to='/yearbook/'><Button floating small="true" className="#01579b light-blue darken-4" waves="light" icon="arrow_back" /></Link>
@@ -18,15 +20,14 @@ const ProfilePage = (props) => {
 
     <div className="Profile-wrapper">
       <div className="Profile-view">
-
         <div className="Profile-header">
           <div className="Profile-header-top">
             <h1>{props.selectedUser.firstName} {props.selectedUser.lastName}</h1>
           </div>
           <div className="Profile-header-bottom">
             <div className="Profile-tabs">
-            <div className="tab">2008</div>
-              <div>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</div>
+              <div className="tab">2008</div>
+              <div>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</div>
               <div className="tab">2018</div>
             </div>
             <div className="Profile-headshots">
@@ -50,8 +51,7 @@ const ProfilePage = (props) => {
           </div>
         </div>
 
-        <Row className="Profile-body #b0bec5 blue-grey lighten-3">
-
+        <Row className="Profile-body">
           <CurLife 
             viewingLoggedInUsersProfile={props.viewingLoggedInUsersProfile}
             user={props.viewingLoggedInUsersProfile ? props.user : props.selectedUser } 
@@ -73,7 +73,6 @@ const ProfilePage = (props) => {
             handleUpdate={props.handleUpdate}
             refreshPage={props.refreshPage}
           />
-
         </Row>
           
       </div>

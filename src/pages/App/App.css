@@ -1,3 +1,9 @@
+body {
+  background-image: url('https://i.imgur.com/133AsXI.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .flex-center-center {
   display: flex;
   align-items: center;
@@ -12,7 +18,17 @@
   z-index: 0;
 }
 
+/* -------- Site-wide Fonts -------- */
+
+a.brand-logo {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+}
+
 h1 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: white;
@@ -20,6 +36,7 @@ h1 {
 
 h2 {
   font-family: 'Raleway', sans-serif;
+  line-height: 0;
 }
 
 h3 {
@@ -28,6 +45,15 @@ h3 {
 
 h4 {
   font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-weight: 600;
+  font-size: 17px;
 }
 
 p {

@@ -7,58 +7,87 @@ const InitLife = (props) => {
 
   return (
     <div>
-      <CardPanel>
-        <div className="quote-text">
-          <div className="quote-icon">
-            <Icon>remove</Icon>
-            <Icon>format_quote</Icon>
-            <Icon>remove</Icon>
-          </div>
-          <p>{props.user.initStatement}</p>
-        </div>
-        {props.viewingLoggedInUsersProfile &&
-          <div className="Update-btn">
-            <UpdateModal
-              initStatement={props.user.curStatement}
-              updateField={props.updateField}
-              handleUpdate={props.handleUpdate}
-              refreshPage={props.refreshPage}
-            />
-          </div>}
-      </CardPanel>
+      <Row>
+        <Col s={3} offset="s9">
+          <CardPanel className="timeline-marker #e0e0e0 grey lighten-2">
+            <h4><h4>2008</h4></h4>
+          </CardPanel>
+        </Col>
+      </Row>
       <CardPanel>
         <Row>
-          <Col s={3} className="panel-title"><h4>2008</h4></Col>
-          <Col s={9} className="highlights">
-            <div className="highlight">
-              <Icon className="highlight">location_on</Icon>
-              <ul>
-                {props.user.elapLocations ? props.user.elapLocations.map((location, idx) =>
-                <li key={idx}>Lived in <span className="strong">{location.location}</span> from {location.locationStartDate} to {location.locationEndDate}</li>
-                ) : null }
-              </ul>
-            </div>
-            <div className="highlight">
-              <Icon className="highlight">business_center</Icon>
-              <ul>
-                {props.user.elapJobs ? props.user.elapJobs.map((job, idx) =>
-                <li key={idx}><span className="strong">{job.jobTitle}</span>: {job.company} ({job.jobStartDate} to {job.jobEndDate})</li>
-                ) : null }
-              </ul>
-            </div>
+          <Col m={12} l={4} className="statement">
+            <CardPanel className="panel-title">
+              <div className="quote-text">
+                <div className="quote-icon">
+                  <Icon>remove</Icon>
+                  <Icon>format_quote</Icon>
+                  <Icon>remove</Icon>
+                </div>
+                <p>{props.user.initStatement}</p>
+              </div>
+              {props.viewingLoggedInUsersProfile &&
+                <div className="Update-btn">
+                  <UpdateModal
+                    initStatement={props.user.initStatement}
+                    updateField={props.updateField}
+                    handleUpdate={props.handleUpdate}
+                    refreshPage={props.refreshPage}
+                  />
+                </div>}
+            </CardPanel>
+          </Col>
+          <Col m={12} l={8}>
+            <Row>
+              <Col m={12} l={4} className="highlights">
+                <div className="highlight">
+                  <Icon className="highlight">group</Icon>
+                  <h5>Teams/Clubs</h5>
+                </div>
+              </Col>
+              <Col m={12} l={8} clasname="highlights">
+                <div>
+                  <ul>
+                    {props.user.initTeams ? props.user.initTeams.map((team, idx) =>
+                    <li key={idx}><span className="strong">{team}</span></li>
+                    ) : null }
+                  </ul>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col m={12} l={4} className="highlights">
+                <div className="highlight">
+                  <Icon className="highlight">replay</Icon>
+                  <h5>Memories</h5>
+                </div>
+              </Col>
+              <Col m={12} l={8} clasname="highlights">
+                <div>
+                  <ul>
+                    {props.user.memories ? props.user.memories.map((memory, idx) =>
+                    <li key={idx}><span className="strong">{memory.title}</span>
+                      <br />
+                      {memory.description}
+                    </li>
+                    ) : null }
+                  </ul>
+                </div>
+              </Col>
+            </Row>
+            {props.viewingLoggedInUsersProfile &&
+            <div className="Update-btn">
+              <UpdateModal
+                initStatement={props.user.initStatement}
+                initTeams={props.user.initTeams}
+                memories={props.user.memories}
+                updateField={props.updateField}
+                handleUpdate={props.handleUpdate}
+                refreshPage={props.refreshPage}
+              />
+            </div>}
           </Col>
         </Row>
-        {props.viewingLoggedInUsersProfile &&
-          <div className="Update-btn">
-            <UpdateModal
-              initStatement={props.user.initStatement}
-              initTeams={props.user.initTeams}
-              memories={props.user.memories}
-              updateField={props.updateField}
-              handleUpdate={props.handleUpdate}
-              refreshPage={props.refreshPage}
-            />
-          </div>}
       </CardPanel>
     </div>
   )

@@ -1,13 +1,5 @@
-.Profile-container {
-  background-image: url('https://i.imgur.com/133AsXI.jpg');
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 .Profile-wrapper {
-  /* background-color: #F0F0F0; */
-  width: 80vw;
+  width: 95vw;
   margin: 0 auto;
 }
 
@@ -34,24 +26,19 @@
   justify-content: center;
   width: 100%;
   height: 50px;
-  background-color: white;
+  border-radius: 5px;
+  background-color: #273238;
   box-shadow: 5px 6px 11px #8888885a;
 }
 
 .Profile-tabs {
+  color: rgb(222, 232, 233);
+  font-size: 25px;
+  font-weight: 300;
   display: flex;
   justify-content: space-around;
   width: 30%;
   position: absolute;
-}
-
-h1 {
-  font-size: 28px;
-  text-transform: capitalize;
-}
-
-h2 {
-  line-height: 0;
 }
 
 .header-bar {
@@ -71,13 +58,12 @@ h2 {
 }
 
 .curHeadshot {
-  height: 150px;
   object-fit: cover;
   object-position: 0 15%;
-  width:150px;
-  height:150px;
+  width:200px;
+  height:200px;
   border-radius: 100px;
-  box-shadow: 5px 6px 20px #8888885f;
+  box-shadow: 5px 6px 20px #3e3e3e5f !important;
   z-index: 0;
   position: relative;
 }
@@ -85,10 +71,10 @@ h2 {
 .Update-img-btn {
   position: absolute;
   z-index: 1;
-  bottom: 26em;
+  bottom: 69em;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .Update-img-btn {
     position: absolute;
     z-index: 1;
@@ -97,28 +83,44 @@ h2 {
 }
 
 .initHeadshot {
-  height: 150px;
   object-fit: cover;
+  box-shadow: 5px 6px 20px #3e3e3e5f !important;
   object-position: 0 15%;
-  width:150px;
-  height:150px;
+  width:200px;
+  height:200px;
   border-radius: 100px;
 }
 
 .Profile-body {
-  background-color: #D3D3D3;
+  background-color: #b2b4b6;
   margin-top: 16px;
-  padding: 20px;
-  /* height: 80vh; */
+  padding: 50px;
+  border-radius: 5px;
 }
 
-.Sidebar {
-  background-color: white;
-  height: 200px;
+.timeline-marker {
+  text-align: center;
+  margin: 50px 0 -8px 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.card-panel {
+  background-color: rgb(255, 235, 235);
 }
 
 .body-item {
   background-color: white;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row {
+  margin-bottom: 0;
 }
 
 .quote-icon {
@@ -131,7 +133,8 @@ h2 {
 }
 
 .quote-text {
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -145,17 +148,12 @@ h2 {
 }
 
 .highlight {
-  /* font-family: 'Raleway', sans-serif; */
   display: flex;
   align-items: center;
 }
 
 .highlight li {
   font-family: 'Raleway', sans-serif;
-}
-
-h4 {
-  margin: 0;
 }
 
 p.highlight, ul {
@@ -166,7 +164,7 @@ i.highlight {
   margin: 10px;
 }
 
-/* ------ Mobile Styling ------ */
+/* -------- Mobile Styling -------- */
 
 @media only screen and (max-width: 1000px) {
   .Profile-body {
@@ -176,7 +174,7 @@ i.highlight {
   }
   
   .Profile-wrapper {
-    width: 100vw;
+    width: 85vw;
   }
 
   .Profile-container {
@@ -194,9 +192,8 @@ i.highlight {
   }
   
   .Profile-header-top {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    margin-top: 30px;
     height: 100px;
   }
   
@@ -206,6 +203,8 @@ i.highlight {
   }
   
   .Profile-tabs {
+    font-weight: 400;
+    font-size: 25px;
     width: 100%;
     margin: 15px;
     padding: 0 20px;

@@ -23,10 +23,6 @@ class App extends Component {
     }
   }
 
-  refreshPage = () => {
-    window.location.reload();
-  }
-
   handleLogout = () => {
     userService.logOut();
     this.setState({user: null})
@@ -48,10 +44,6 @@ class App extends Component {
     })
   }
 
-  handleFocus = (e) => {
-    e.target.select();
-  }
-
   handleUpdate = () =>  {
     fetch(`/api/yearbook/${userService.getUser()._id}/update`, {
       method: 'PUT',
@@ -63,9 +55,17 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  handleFocus = (e) => {
+    e.target.select();
+  }
+
   handleImageUpdate = () => {
     this.handleUpdate();
     this.refreshPage();
+  }
+
+  refreshPage = () => {
+    window.location.reload();
   }
 
   /*---------- Lifecycle Methods ----------*/
@@ -92,7 +92,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <div>
+        <div>
           <NavBar 
             user={this.state.user}
             handleLogout={this.handleLogout}
@@ -145,7 +145,7 @@ class App extends Component {
                 <Redirect to='/login' />
             )}/>
           </Switch>
-          </div>
+        </div>
       </div>
     );
   }

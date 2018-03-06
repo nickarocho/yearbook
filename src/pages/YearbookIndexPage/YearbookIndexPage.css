@@ -1,9 +1,12 @@
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 400px) {
   .Index-grid {
     display: grid;
-    grid-template-columns: repeat(2, fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 0 10px;
     text-align: center;
+  }
+  .Index-container {
+    margin: 0 10vw;
   }
 }
 
@@ -47,8 +50,22 @@
 
 /* -------- Image Cards -------- */
 
+.card {
+  background-color: transparent;
+  object-fit: cover;
+  object-position: 100% 85% !important;
+  clip-path: inset(10px 6px 0);
+}
+
 img.activator {
   max-width: 100%;
+  border-radius: 5px;
+}
+
+.card .card-image img {
+  /* max-width: 100%; */
+  object-fit: cover;
+  object-position: 10% 85%;
   border-radius: 5px;
 }
 
@@ -70,6 +87,10 @@ img.activator {
 
 .card-content {
   background-color: #b0bec5;
+}
+
+p.link {
+  color: black !important;
 }
 
 /* -------- End Image Cards -------- */
@@ -96,7 +117,8 @@ input.search {
 }
 
 input.search::placeholder {
-  color: rgb(159, 159, 159);
+  color: rgb(92, 92, 92);
+  font-size: 16px;
 }
 
 /* when text input is in focus */
