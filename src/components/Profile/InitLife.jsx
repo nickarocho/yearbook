@@ -48,16 +48,17 @@ const InitLife = (props) => {
             </div>
           </Col>
         </Row>
-        <div className="Update-btn">
-          <UpdateModal
-            initStatement={props.user.initStatement}
-            initTeams={props.user.initTeams}
-            memories={props.user.memories}
-            updateField={props.updateField}
-            handleUpdate={props.handleUpdate}
-            refreshPage={props.refreshPage}
-          />
-        </div>
+        {props.viewingLoggedInUsersProfile &&
+          <div className="Update-btn">
+            <UpdateModal
+              initStatement={props.user.initStatement}
+              initTeams={props.user.initTeams}
+              memories={props.user.memories}
+              updateField={props.updateField}
+              handleUpdate={props.handleUpdate}
+              refreshPage={props.refreshPage}
+            />
+          </div>}
       </CardPanel>
     </div>
   )

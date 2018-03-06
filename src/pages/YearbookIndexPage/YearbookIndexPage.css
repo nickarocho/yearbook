@@ -68,6 +68,10 @@ img.activator {
   padding: 15px 0
 }
 
+.card-content {
+  background-color: #b0bec5;
+}
+
 /* -------- End Image Cards -------- */
 
 p.Index-name {

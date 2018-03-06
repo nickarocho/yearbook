@@ -1,9 +1,12 @@
 .Profile-container {
-  /* margin: 0 ; */
+  background-image: url('https://i.imgur.com/133AsXI.jpg');
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .Profile-wrapper {
-  background-color: #F0F0F0;
+  /* background-color: #F0F0F0; */
   width: 80vw;
   margin: 0 auto;
 }
@@ -20,6 +23,7 @@
 
 .Profile-header-top {
   display: flex;
+  margin-top: 80px;
   justify-content: center;
   width: 100%;
 }
@@ -55,7 +59,8 @@ h2 {
 }
 
 .back-btn {
-  padding: 20px 0;
+  position: fixed;
+  padding: 50px;
 }
 
 .Profile-headshots {
@@ -74,14 +79,21 @@ h2 {
   border-radius: 100px;
   box-shadow: 5px 6px 20px #8888885f;
   z-index: 0;
+  position: relative;
 }
 
 .Update-img-btn {
-  display: flex;
-  justify-content: center;
   position: absolute;
   z-index: 1;
-  bottom: 35em;
+  bottom: 26em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .Update-img-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 35em;
+  }
 }
 
 .initHeadshot {
@@ -133,8 +145,13 @@ h2 {
 }
 
 .highlight {
+  /* font-family: 'Raleway', sans-serif; */
   display: flex;
   align-items: center;
+}
+
+.highlight li {
+  font-family: 'Raleway', sans-serif;
 }
 
 h4 {

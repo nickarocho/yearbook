@@ -48,6 +48,7 @@ const ElapLife = (props) => {
             </div>
           </Col>
         </Row>
+        {props.viewingLoggedInUsersProfile &&
         <div className="Update-btn">
           <UpdateModal
             elapStatement={props.user.elapStatement}
@@ -60,7 +61,7 @@ const ElapLife = (props) => {
             handleUpdate={props.handleUpdate}
             refreshPage={props.refreshPage}
           />
-        </div>
+        </div>}
       </CardPanel>
     </div>
   )

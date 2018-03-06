@@ -96,6 +96,7 @@ class App extends Component {
           <NavBar 
             user={this.state.user}
             handleLogout={this.handleLogout}
+            url={window.location.href}
           />
           <Switch>
             <Route exact path='/' render={() => 
@@ -119,10 +120,11 @@ class App extends Component {
                 handleLogin={this.handleLogin}
               />
             }/>
-            <Route exact path='/yearbook' render={() => (
+            <Route exact path='/yearbook' render={(props) => (
               userService.getUser() ?
                 <YearbookIndexPage 
                   users={this.state.users}
+                  viewingLoggedInUsersProfile={ userService.getUser()._id === props.match.params.id }
                 />
               :
                 <Redirect to='/login' />

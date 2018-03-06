@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProfilePage.css';
-import { Row, Preloader } from 'react-materialize';
+import { Row, Preloader, Button } from 'react-materialize';
 import CurLife from './../../components/Profile/CurLife';
 import ElapLife from './../../components/Profile/ElapLife';
 import InitLife from './../../components/Profile/InitLife';
@@ -13,7 +13,7 @@ const ProfilePage = (props) => {
   let display = (props.selectedUser && props.user) ? <div className="Profile-container">
 
     <div className="back-btn">
-      <Link to='/yearbook/'>← Back to Yearbook</Link>
+      <Link to='/yearbook/'><Button floating small="true" className="#01579b light-blue darken-4" waves="light" icon="arrow_back" /></Link>
     </div>
 
     <div className="Profile-wrapper">
@@ -50,7 +50,7 @@ const ProfilePage = (props) => {
           </div>
         </div>
 
-        <Row className="Profile-body">
+        <Row className="Profile-body #b0bec5 blue-grey lighten-3">
 
           <CurLife 
             viewingLoggedInUsersProfile={props.viewingLoggedInUsersProfile}
