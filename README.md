@@ -13,7 +13,7 @@ Eventually this is going to be where people can buy tickets for the actual event
 ![UI Screenshot](https://i.imgur.com/IllGr0M.png)
 
 ## Getting Started
-* [View the App](https://immense-garden-11814.herokuapp.com/)
+* [View the App](https://year-book.herokuapp.com/)
 * [Planning](https://trello.com/b/VyOfshlw/project-4-wdi-capstone)
 
 ### How the app works
