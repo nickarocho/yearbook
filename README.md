@@ -15,8 +15,8 @@ Eventually this is going to be where people can buy tickets for the actual event
 ## Getting Started
 This app is intended for my actual classmates, but feel free to use this login:
 
-Username: test@test.com<br />
-Password: test
+<strong>Username:</strong> test@test.com<br />
+<strong>Password:</strong> test
 
 * [View the App](https://year-book.herokuapp.com/)
 (click on my 2008 face or search for my name, Nick Arocho, to see an example user profile)
