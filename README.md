@@ -13,7 +13,12 @@ Eventually this is going to be where people can buy tickets for the actual event
 ![UI Screenshot](https://i.imgur.com/IllGr0M.png)
 
 ## Getting Started
+This app is intended for my actual classmates, but feel free to use this login:
+Username: test@test.com
+Password: test
+
 * [View the App](https://year-book.herokuapp.com/)
+(click on my 2008 face or search for my name, Nick Arocho, to see an example user profile)
 * [Planning](https://trello.com/b/VyOfshlw/project-4-wdi-capstone)
 
 ### How the app works
