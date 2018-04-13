@@ -31,8 +31,8 @@ For the intended users, here is how it works:
 
 *** If you are NOT a graduate of the 2008 THS class, login with these credentials to view the app:
 
-* username: 
-* password:
+<strong>Username:</strong> test@test.com<br />
+<strong>Password:</strong> test
 
 3. Click your profile to add data to your: 
     * "Current" profile, like where you live now, what you do, your relationship status, etc.
