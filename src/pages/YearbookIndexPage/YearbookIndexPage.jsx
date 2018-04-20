@@ -63,7 +63,6 @@ class YearbookIndexPage extends Component {
           </div>
         </div>
       : <div className="vertical-center flex-center-center"><Preloader size='big'/></div>
-
     return (
       <div>{display}</div>
     )
