@@ -13,7 +13,14 @@ Eventually this is going to be where people can buy tickets for the actual event
 ![UI Screenshot](https://i.imgur.com/IllGr0M.png)
 
 ## Getting Started
-(https://immense-garden-11814.herokuapp.com/)
+This app is intended for my actual classmates, but feel free to use this login:
+
+<strong>Username:</strong> test@test.com<br />
+<strong>Password:</strong> test
+
+* [View the App](https://year-book.herokuapp.com/)
+(click on my 2008 face or search for my name, Nick Arocho, to see an example user profile)
+* [Planning](https://trello.com/b/VyOfshlw/project-4-wdi-capstone)
 
 ### How the app works
 
@@ -24,8 +31,8 @@ For the intended users, here is how it works:
 
 *** If you are NOT a graduate of the 2008 THS class, login with these credentials to view the app:
 
-* username: 
-* password:
+<strong>Username:</strong> test@test.com<br />
+<strong>Password:</strong> test
 
 3. Click your profile to add data to your: 
     * "Current" profile, like where you live now, what you do, your relationship status, etc.
