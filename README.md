@@ -37,7 +37,7 @@ For the intended users, here is how it works:
 3. Click your profile to add data to your: 
     * "Current" profile, like where you live now, what you do, your relationship status, etc.
     * "Elapsed" profile, like places you have traveled, jobs you've held, and major milestone events in your life (weddings, career achievements, etc.).
-    * "Inital" profile, like teams/clubs you were a part of during senior year and your favorite high school memories. Throwback!
+    * "Initial" profile, like teams/clubs you were a part of during senior year and your favorite high school memories. Throwback!
 5. Click on other classmates who have added info to their profile and enjoy a major walk down memory lane, all while learning about what everyone has been up to before the big day!
 
 ## Technologies Used
